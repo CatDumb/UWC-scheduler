@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Single Calendar</title>
+	<!-- Webix Library -->
+	<script type="text/javascript" src="../../codebase/webix/webix.js"></script>
+	<link href="../../codebase/skins/flat.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="../../codebase/webix/webix.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+	<link rel="stylesheet" href="../../codebase/style.css">
+
+	<!-- Scheduler -->
+	<script type="text/javascript" src="../../codebase/scheduler.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../codebase/scheduler.css" />
+
+</head>
+
+<body>
+
+
+	<section id="menu">
+		<div class="logo">
+			<img src="../../codebase/img/logo.png">
+			<h2>UWC2.0</h2>
+		</div>
+		<div class="items">
+			<a href="#">
+				<li>
+					<i class="fas fa-chart-pie"></i>
+					<span href="#">Dashboard</span>
+				</li>
+			</a>
+			<a href="#">
+				<li>
+					<i class="fa-solid fa-person-digging"></i>
+					<span href="#">Employees</span>
+				</li>
+			</a>
+			<a href="#">
+				<li>
+					<i class="fa-solid fa-truck"></i>
+					<span href="#">Vehicles</span>
+				</li>
+			</a>
+			<a href="#">
+				<li>
+					<i class="fa-solid fa-location-pin"></i>
+					<span href="#">Checkpoints</span>
+				</li>
+			</a>
+			<a href="#">
+				<li>
+					<i class="fa-solid fa-map-location-dot"></i>
+					<span href="#">Map</span>
+				</li>
+			</a>
+			<a href="#">
+				<li>
+					<i class="fa-solid fa-chart-line"></i>
+					<span href="#">Statistics</span>
+				</li>
+			</a>
+		</div>
+	</section>
+
+
+		<section id="interface">
+			<div class="navbar">
+				<div class="n1">
+					<div class="search">
+						<i class="fas fa-search"></i>
+						<input type="text" placeholder="Search">
+					</div>
+				</div>
+				<div class="profile">
+					<i class="fas fa-bell"></i>
+					<img src="../../codebase/img/logo.png" alt="">
+				</div>
+			</div>
+		</section>
+
+
+	<script>
+		webix.ready(function () {
+			webix.CustomScroll.init();
+			webix.ui({
+				view: "scheduler",
+				container: "interface",
+				date: new Date(2020, 9, 7, 0, 0, 0),
+				calendars: false,
+				url: "https://docs.webix.com/calendar-backend/",
+			});
+		});
+	</script>
+	
+
+		
+
+</body>
+
+</html>

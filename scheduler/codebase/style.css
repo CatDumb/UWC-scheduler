@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: rgb(0, 85, 7); 
+    --background-color: #f4f6fc;
+    --icon-color: #edf2fc;
+    --icon-hover-color: #f3f4f6;
+    --icon-background-hover-color: #253047;
+    --logo-color: #fff;
+    --nav-bar: #fff;
+    --main-text-primary-color: #444a53;
+    --main-text-secondary-color: #828997;
+    --main-element-background: #fff;
+}
+
+body { 
+    width: 100%;
+    background: var(--background-color);
+    position: relative;
+    display: flex;
+}
+
+/* menu side bar */
+#menu {
+    background: #111827;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+}
+
+#menu .logo {
+    display: flex;
+    align-items: center;
+    color: var(--logo-color);
+    padding: 30px 0 0 30px;
+}
+
+#menu .logo img{
+    width: 40px;
+    margin-right: 15px;
+}
+
+#menu .items{
+    margin-top: 40px;
+}
+
+#menu .items a li{
+    list-style: none;
+    padding: 15px 0;
+    transition: 0.3s ease;
+}
+
+#menu .items a li:hover {
+    background: var(--icon-background-hover-color);
+    cursor: pointer;
+}
+
+#menu .items a:nth-child(1) li{
+    border-left: 4px solid #fff;
+}
+
+#menu .items a li i{
+    color: var(--icon-color);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 10px 0 25px;
+}
+
+#menu .items a li i:hover,
+#menu .items a li span:hover {
+    color: var(--icon-hover-color);
+    cursor: pointer;
+}
+
+#menu .items a li span{
+    text-decoration: none;
+    color: var(--icon-color);
+    font-weight: 300px;
+    transition: 0.15s ease;
+}
+
+
+
+/* Interface */
+#interface {
+    width: calc(100% - 300px);
+    margin-left: 300px;
+}
+
+/* Navbar */
+
+#interface .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--nav-bar);
+    padding: 15px 30px;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+#interface .navbar .search {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 14px;
+    border: 1px solid #d7dbe6;
+    border-radius: 4px;
+}
+
+#interface .navbar .search i {
+    margin-right: 14px;
+}
+
+#interface .navbar .search input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+#interface .navbar .profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#interface .navbar .profile i {
+    margin-right: 20px;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+#interface .navbar .profile img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Main interface */
+.box {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.i-name {
+    color: var(--main-text-primary-color);
+    padding: 30px 30px 0 30px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.values {
+    padding: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.values .val-box {
+    background: var(--main-element-background);
+    width: 235px;
+    margin: 15px;;
+    padding: 16px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.values .val-box:nth-child(1) {
+   margin-left: 0px;
+}
+
+.values .val-box i {
+    font-size: 25px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.values .val-box:nth-child(1) i {
+    background: #02c5b5;
+}
+.values .val-box:nth-child(2) i {
+    background: #942819;
+}
+.values .val-box:nth-child(3) i {
+    background: #098127;
+}
+.values .val-box:nth-child(4) i {
+    background: #c502bb;
+}
+
+.values .val-box h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.values .val-box span {
+    font-size: 15px;
+    color: var(--main-text-secondary-color);
+}
+
+
+/* Table format */
